@@ -18,6 +18,8 @@ jobs:
             args: '-Dscan.tag.baseline-transforms'
           - cache: 'transforms'
             args: '-Dscan.tag.transformCachingDisabled -Dorg.gradle.internal.transform-caching-disabled'
+          - cache: 'transforms'
+            args: '-Dscan.tag.transformCachingDisabled-selected -Dorg.gradle.internal.transform-caching-disabled=dagger.hilt.android.plugin.util.AggregatedPackagesTransform,org.jetbrains.kotlin.gradle.internal.transforms.BuildToolsApiClasspathEntrySnapshotTransform,com.android.build.gradle.internal.dependency.EnumerateClassesTransform,com.android.build.gradle.internal.dependency.LibrarySymbolTableTransform,com.android.build.gradle.internal.dependency.AarResourcesCompilerTransform,org.jetbrains.kotlin.gradle.internal.transforms.ClasspathEntrySnapshotTransform,com.android.build.gradle.internal.dependency.ExtractJniTransform'
           - cache: 'kotlin-dsl'
             args: '-Dscan.tag.baseline-kotlin-dsl'
           - cache: 'kotlin-dsl'
